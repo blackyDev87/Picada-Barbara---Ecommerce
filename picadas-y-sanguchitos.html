@@ -47,8 +47,7 @@
   </head>
   <body>
     <!-- NAV -->
-
-    <div class="container-fluid navbar-contain fixed-top" id="navbar">
+<div class="container-fluid navbar-contain fixed-top" id="navbar">
       <div class="row">
         <nav class="navbar navbar-expand-md text-center">
           <div class="col-12 col-md-2">
@@ -149,7 +148,7 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="conservas.html">
                         <img
                           src="assets/iconos/conserva.png"
                           alt="conserva"
@@ -163,7 +162,7 @@
                       <hr class="dropdown-divider" />
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="eventos-regalos.html">
                         <img
                           src="assets/iconos/calendario.png"
                           alt="eventos-y-regalos"
@@ -174,7 +173,7 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="catering.html">
                         <img
                           src="assets/iconos/abastecimiento.png"
                           alt="catering"
@@ -187,7 +186,7 @@
                   </ul>
                 </li>
                 <li class="nav-item mt-5 mt-md-0">
-                  <a class="nav-link" aria-current="page" href="#inicio">
+                  <a class="nav-link" aria-current="page" href="index.html">
                     <img
                       src="assets/iconos/castillo.png"
                       alt="castillo"
@@ -198,7 +197,7 @@
                   </a>
                 </li>
                 <li class="nav-item mt-5 mt-md-0">
-                  <a class="nav-link" href="index.html">
+                  <a class="nav-link" href="zonas-envio.html">
                     <img
                       src="assets/iconos/mapa.png"
                       alt="mapa"
@@ -209,7 +208,7 @@
                   </a>
                 </li>
                 <li class="nav-item mt-5 mt-md-0">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="contacto.html"
                     ><img
                       src="assets/iconos/mensaje.png"
                       alt="contacto"
@@ -222,15 +221,20 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-1 mt-3 mb-3 mb-md-4">
-            <a class="nav-brand" href="#"
-              ><img
+
+          <div
+            class="col-md-1 mt-3 mb-3 mb-md-4"
+            data-bs-toggle="modal"
+            data-bs-target="#registroModal"
+          >
+            <span class="cursor-cart-nav">
+              <img
                 src="assets/iconos/vikingo (2).png"
                 alt="registro"
                 title="registro"
                 class="img-fluid vikingo-register"
               />
-            </a>
+            </span>
           </div>
 
           <div
@@ -238,7 +242,7 @@
             data-bs-toggle="modal"
             data-bs-target="#cartModal"
           >
-            <span class="cursor-cart-nav" id="toggleFixed">
+            <span class="cursor-cart-nav">
               <img
                 src="assets/iconos/bolsa-de-la-compra.png"
                 alt="carrito"
