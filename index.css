@@ -12,6 +12,11 @@ body {
   }
 }
 
+.link-wsp {
+  text-decoration: none;
+  color: #f6f6f6;
+}
+
 .nav-logo {
   width: 10rem;
   height: 10rem;
