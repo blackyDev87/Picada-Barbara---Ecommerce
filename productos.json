@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Picada Premium de Quesos y Fiambres 'Tapiz del Destino'",
+    "price": 25000,
+    "ingredients": "Queso Saborizado- Queso Gruyere - Queso Holanda - Queso Brie -Jamon crudo - Jamon cocido natural - Lomito finas hierbas - Salame con especias -Longaniza - Chorizo colorado - Nueces - Almendras - Aceitunas rellenas - Cherry.",
+    "image": "assets/picadas/para web/tablas/picada 3 sin tapa.jpg",
+    "image2": "assets/picadas/para web/tablas/picada 3 con tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "category": "A"
+  },
+  {
+    "id": 2,
+    "name": "Picada Artesanal en Pan de Campo 'Vikinga'",
+    "price": 25000,
+    "ingredients": "Queso Saborizado - Queso Holanda - Queso Fontina - Queso Roquefort - Jamon crudo - Bondiola - Lomito finas hierbas - Cantimpalo - Longaniza - Leber - Mini brochettes Aceitunas rellenas, Albahaca y Cherry.",
+    "image": "assets/picadas/para web/tablas/pan de campo frente.jpg",
+    "image2": "assets/picadas/para web/tablas/pan de campo sin tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04145.jpg",
+    "image4": "assets/picadas/eventos/combo2 - picada4.jpg",
+    "category": "A"
+  },
+
+  {
+    "id": 3,
+    "name": "Picada Premium de Quesos 'Triangulo de Odin'",
+    "price": 25000,
+    "ingredients": "Queso Saborizado - Queso Reggianito - Queso Brie - Queso Roquefort - Queso Gruyere - Boconccinos - Nueces - Almendras - Aceitunas rellenas - Cherry- Albahaca fresca.",
+    "image": "assets/picadas/para web/tablas/picada 1 sin tapas.jpg",
+    "image2": "assets/picadas/para web/tablas/picada 1 con tapas.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "category": "A"
+  },
+
+  {
+    "id": 4,
+    "name": "Picada Premium de Fiambres <br>'Inguz'",
+    "price": 25000,
+    "ingredients": "Jamon crudo - Bondiola - Jamon cocido natural - Lomito finas hierbas - Salame con especias - Longaniza - Leber - Nueces - Almendras - Aceitunas rellenas - Cherry - Bastones de Apio.",
+    "image": "assets/picadas/para web/tablas/picada 2 sin tapa.jpg",
+    "image2": "assets/picadas/para web/tablas/picada 2 con tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "category": "A"
+  },
+
+  {
+    "id": 5,
+    "name": "Picada Premium Vegetariana 'Runa del Amor'",
+    "price": 25000,
+    "ingredients": "Queso Fontina - Boconccinos - Queso Saborizado - Queso Holanda - Queso Brie - Bastones de Zanahoria - Bastones de Apio - Mini brochettes de Cherry, Aceituna y Albahaca - Nueces - Almendras.",
+    "image": "assets/picadas/para web/tablas/picada 4 sin tapa.jpg",
+    "image2": "assets/picadas/para web/tablas/picada 4 con tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "category": "A"
+  },
+
+  {
+    "id": 6,
+    "name": "Sanguchitos Artesanales Varios Sabores (x 12 unid.)",
+    "price": 25000,
+    "ingredients": "• Lomito finas hierbas - Queso - Ciboulette y queso crema. • Jamon crudo - Rucula - Queso - Alioli. • Queso crema y Roquefort - Apio - Nuez - Queso. • Albahaca - Cherry - Queso - Alioli. • Berenjena al escabeche. • Morron agridulce. • Pollo al escabeche. Con figacitas de manteca con semillas de sésamo y amapola.",
+    "image": "assets/picadas/cajas fondo blanco/sanguchitos dentro de caja.jpg",
+    "image4": "assets/picadas/combos/combo1 - sanguchitos/20201007_190927.jpg",
+    "image3": "assets/picadas/cajas fondo blanco/caja perfil cerrada.jpg",
+    "image2": "assets/picadas/combos/combo1 - sanguchitos/20201007_185212.jpg",
+    "category": "A"
+  },
+
+  {
+    "id": 7,
+    "name": "Picada Artesanal en Pan de Campo 'Vikinga'",
+    "price": 25000,
+    "image": "assets/picadas/para web/tablas/pan de campo frente.jpg",
+    "category": "B"
+  },
+
+  {
+    "id": 8,
+    "name": "Picada Artesanal en Pan de Campo 'Vikinga'",
+    "price": 25000,
+    "image": "assets/picadas/para web/tablas/picada 2 sin tapa.jpg",
+    "category": "B"
+  }
+]
