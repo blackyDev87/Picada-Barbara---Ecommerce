@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // PRODUCTOS DINAMICOS
 document.addEventListener("DOMContentLoaded", function () {
-  const categoryToLoad = "A"; // Cambia esta categoría según lo que necesites
+  const categoryToLoad = "A"; 
 
   fetch("productos.json")
     .then((response) => response.json())
@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="icon-cart-contain-inCard p-relative" onclick="addToCart(${
                 product.id
               })">
-                     <img src="/assets/iconos/bolsa-de-la-compra.png"
+                     <img src="assets/iconos/bolsa-de-la-compra.png"
                       alt="carrito"title="carrito" class="cart-inCard"/>
                     <img
-                      src="/assets/iconos/casco-vikingo (2).png"
+                      src="assets/iconos/casco-vikingo (2).png"
                       alt="casco-vikingo"
                       title="carrito casco vikingo"
                       class="overlay-icon-inCard"
