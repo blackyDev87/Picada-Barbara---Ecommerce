@@ -345,6 +345,11 @@ input.form-control:focus {
   font-family: "Montserrat", sans-serif;
 }
 
+.link-categorias {
+  text-decoration: none;
+  color: #f6f6f6;
+}
+
 .card-categorias {
   border: 0 !important;
   background-color: transparent !important;
@@ -458,9 +463,7 @@ input.form-control:focus {
 
 .banner-link-contacto {
   text-decoration: none;
-}
-.banner-span-contacto {
-  color: #bb3b17;
+  color: #bb3b17 !important;
 }
 
 .banner-title {
