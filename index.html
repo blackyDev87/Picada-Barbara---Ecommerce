@@ -9,7 +9,7 @@
     <meta name="viewport" content="width = device-width, initial-scale=1" />
     <link
       rel="icon"
-      href="assets/logo/LOGOS Y SIMBOLOS REDES/logo sin fondo130x130.png"
+      href="/assets/logo/logos y simbolos redes/logo sin fondo130x130.png"
       type="image/x-icon"
     />
     <meta
@@ -52,10 +52,10 @@
       <div class="row">
         <nav class="navbar navbar-expand-md text-center">
           <div class="col-12 col-md-2">
-            <a class="navbar-brand" href="#Inicio">
+            <a class="navbar-brand" href="index.html">
               <img
-                src="assets/logo/LOGOS Y SIMBOLOS REDES/logo sin fondo.png"
-                alt="Logo Picada"
+                src="./assets/logo/logos y simbolos redes/logo sin fondo.png"
+                alt="logo Picada"
                 class="img-fluid nav-logo"
                 title="logo-pb"
               />
@@ -74,7 +74,7 @@
                 type="submit"
               >
                 <img
-                  src="assets/iconos/catalejo (1).png"
+                  src="/assets/iconos/catalejo (1).png"
                   class="img-fluid search-icon"
                   alt="search"
                   title="busqueda"
@@ -92,7 +92,7 @@
             aria-label="Toggle navigation"
           >
             <img
-              src="assets/iconos/barco (1).png"
+              src="/assets/iconos/barco (1).png"
               alt="barco"
               title="barco"
               class="img-fluid barco-icon d-md-none"
@@ -125,7 +125,7 @@
                     id="martilloToggle"
                   >
                     <img
-                      src="assets/iconos/martillo.png"
+                      src="/assets/iconos/martillo.png"
                       alt="martillo"
                       class="img-fluid martillo-icon martillo-icon"
                       title="martillo"
@@ -135,9 +135,12 @@
                   </a>
                   <ul class="dropdown-menu" id="dropdownMenu">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a
+                        class="dropdown-item"
+                        href="picadas-y-sanguchitos.html"
+                      >
                         <img
-                          src="assets/iconos/tabla-de-quesos.png"
+                          src="/assets/iconos/tabla-de-quesos.png"
                           alt="picada"
                           class="picada-icon"
                           title="tabla de quesos"
@@ -148,7 +151,7 @@
                     <li>
                       <a class="dropdown-item" href="#">
                         <img
-                          src="assets/iconos/conserva.png"
+                          src="/assets/iconos/conserva.png"
                           alt="conserva"
                           title="frasco de conservas"
                           class="img-fluid conserva-icon"
@@ -162,7 +165,7 @@
                     <li>
                       <a class="dropdown-item" href="#">
                         <img
-                          src="assets/iconos/calendario.png"
+                          src="/assets/iconos/calendario.png"
                           alt="eventos-y-regalos"
                           title="calendario eventos y regalos"
                           class="img-fluid regalo-icon"
@@ -173,7 +176,7 @@
                     <li>
                       <a class="dropdown-item" href="#">
                         <img
-                          src="assets/iconos/abastecimiento.png"
+                          src="/assets/iconos/abastecimiento.png"
                           alt="catering"
                           title="catering"
                           class="img-fluid catering-icon"
@@ -186,7 +189,7 @@
                 <li class="nav-item mt-5 mt-md-0">
                   <a class="nav-link" aria-current="page" href="#inicio">
                     <img
-                      src="assets/iconos/castillo.png"
+                      src="/assets/iconos/castillo.png"
                       alt="castillo"
                       title="Inicio"
                       class="img-fluid castillo-icon"
@@ -195,9 +198,9 @@
                   </a>
                 </li>
                 <li class="nav-item mt-5 mt-md-0">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="index.html">
                     <img
-                      src="assets/iconos/mapa.png"
+                      src="/assets/iconos/mapa.png"
                       alt="mapa"
                       title="zonas de envio"
                       class="img-fluid mapa-icon"
@@ -208,7 +211,7 @@
                 <li class="nav-item mt-5 mt-md-0">
                   <a class="nav-link" href="#"
                     ><img
-                      src="assets/iconos/mensaje.png"
+                      src="/assets/iconos/mensaje.png"
                       alt="contacto"
                       title="contacto"
                       class="img-fluid contacto-icon"
@@ -222,28 +225,77 @@
           <div class="col-md-1 mt-3 mb-3 mb-md-4">
             <a class="nav-brand" href="#"
               ><img
-                src="assets/iconos/vikingo (2).png"
+                src="/assets/iconos/vikingo (2).png"
                 alt="registro"
                 title="registro"
                 class="img-fluid vikingo-register"
               />
             </a>
           </div>
+
           <div class="icon-cart-contain col-md-1 me-3 mt-3 mb-3 mb-md-4">
-            <a class="nav-brand" href="#">
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#cartModal"
+              data-bs-backdrop="false"
+            >
               <img
-                src="assets/iconos/bolsa-de-la-compra.png"
+                src="/assets/iconos/bolsa-de-la-compra.png"
                 alt="carrito"
                 title="carrito"
                 class="img-fluid cart"
               />
               <img
-                src="assets/iconos/casco-vikingo (2).png"
+                src="/assets/iconos/casco-vikingo (2).png"
                 alt="casco-vikingo"
                 title="carrito casco vikingo"
                 class="overlay-icon"
               />
+              <span class="cart-count">0</span>
             </a>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="cartModal"
+            tabindex="-1"
+            aria-labelledby="cartModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cartModalLabel">
+                    Carrito de Compras
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="cart-cont">
+                    <div class="row"></div>
+                  </div>
+                  <p class="cart-total">Total: $0</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
@@ -270,7 +322,7 @@
           </div>
           <div class="col-md-6 header-img-cont animate-header">
             <img
-              src="assets/PICADAS/FOTOS REDES/DSC04176.jpg"
+              src="/assets/picadas/fotos redes/DSC04176.jpg"
               class="header-img"
               alt="picada para pedir"
               title="picada para pedir"
@@ -289,9 +341,9 @@
         <div class="card-deck mt-5">
           <div class="row">
             <div class="col-12 col-md-4 mb-5">
-              <div class="card">
+              <div class="card-categorias">
                 <img
-                  src="assets/PICADAS/EVENTOS/categorias-picada.jpg"
+                  src="/assets/picadas/eventos/categorias-picada.jpg"
                   class="img-fluid cards-categorias-img"
                   alt="picadas"
                   title="picadas"
@@ -303,9 +355,9 @@
               </div>
             </div>
             <div class="col-12 col-md-4 mb-5">
-              <div class="card">
+              <div class="card-categorias">
                 <img
-                  src="assets/PICADAS/EVENTOS/categorias-regalos.jpg"
+                  src="/assets/picadas/eventos/categorias-regalos.jpg"
                   class="img-fluid cards-categorias-img"
                   alt="regalos"
                   title="regalos"
@@ -317,9 +369,9 @@
               </div>
             </div>
             <div class="col-12 col-md-4 mb-5">
-              <div class="card">
+              <div class="card-categorias">
                 <img
-                  src="assets/PICADAS/EVENTOS/categorias-catering.jpg"
+                  src="/assets/picadas/eventos/categorias-catering.jpg"
                   class="img-fluid cards-categorias-img"
                   alt="catering"
                   title="catering"
@@ -343,7 +395,7 @@
           <div class="col">
             <img
               class="icon-Info-img mb-3"
-              src="assets/iconos/mapas.png"
+              src="/assets/iconos/mapas.png"
               alt="puntos-de-entrega"
               title="puntos de entrega"
             />
@@ -355,7 +407,7 @@
           <div class="col">
             <img
               class="icon-Info-img mb-3"
-              src="assets/iconos/historia.png"
+              src="/assets/iconos/historia.png"
               alt="pedidos"
               title="pedidos"
             />
@@ -367,7 +419,7 @@
           <div class="col">
             <img
               class="icon-Info-img mb-3"
-              src="assets/iconos/barco-vikingo.png"
+              src="/assets/iconos/barco-vikingo.png"
               alt="envios"
               title="envios"
             />
@@ -378,7 +430,7 @@
           <div class="col">
             <img
               class="icon-Info-img mb-3"
-              src="assets/iconos/bolsa-de-dinero (1).png"
+              src="/assets/iconos/bolsa-de-dinero (1).png"
               alt="medios de pago"
               title="medios de pago"
             />
@@ -398,10 +450,10 @@
           </div>
 
           <div class="col">
-            <div class="card">
+            <div class="card card-elegidos">
               <a href="#">
                 <img
-                  src="assets/PICADAS/PARA WEB/tablas/picada 3 sin tapa.jpg"
+                  src="./assets/picadas/para web/tablas/picada 3 sin tapa.jpg"
                   class="img-fluid card-img-elegidos rounded-circle"
                   alt="mas-elegido-1"
                   title="mas-elegido-1"
@@ -416,10 +468,10 @@
           </div>
 
           <div class="col">
-            <div class="card">
+            <div class="card card-elegidos">
               <a href="#">
                 <img
-                  src="assets/PICADAS/PARA WEB/tablas/pan de campo frente.jpg"
+                  src="./assets/picadas/para web/tablas/pan de campo frente.jpg"
                   class="img-fluid card-img-elegidos rounded-circle"
                   alt="mas-elegido-1"
                   title="mas-elegido-1"
@@ -427,17 +479,17 @@
               </a>
               <div class="card-body">
                 <h5 class="card-title">
-                  Picada Premium de Quesos y Fiambres “Tapiz del Destino”
+                  Picada Artesanal en Pan de Campo "Vikinga"
                 </h5>
               </div>
             </div>
           </div>
 
           <div class="col">
-            <div class="card">
+            <div class="card card-elegidos">
               <a href="#">
                 <img
-                  src="assets/PICADAS/EVENTOS/tabla carne + arrolla 1.jpg"
+                  src="./assets/picadas/eventos/tabla carne + arrolla 1.jpg"
                   class="img-fluid card-img-elegidos rounded-circle"
                   alt="mas-elegido-1"
                   title="mas-elegido-1"
@@ -445,26 +497,24 @@
               </a>
               <div class="card-body">
                 <h5 class="card-title">
-                  Picada Premium de Quesos y Fiambres “Tapiz del Destino”
+                  Tabla Artesanal de Carne y Arrollado de pollo
                 </h5>
               </div>
             </div>
           </div>
 
           <div class="col">
-            <div class="card">
+            <div class="card card-elegidos">
               <a href="#">
                 <img
-                  src="assets/PICADAS/EVENTOS/Combo 1 - Sang + Conser1.jpg"
+                  src="./assets/picadas/eventos/Combo 1 - Sang + Conser1.jpg"
                   class="img-fluid card-img-elegidos rounded-circle"
                   alt="mas-elegido-1"
                   title="mas-elegido-1"
                 />
               </a>
               <div class="card-body">
-                <h5 class="card-title">
-                  Picada Premium de Quesos y Fiambres “Tapiz del Destino”
-                </h5>
+                <h5 class="card-title">Combo 1 - Sanguchitos Artesanales</h5>
               </div>
             </div>
           </div>
@@ -481,7 +531,7 @@
             class="banner-content-wrapper d-flex flex-column justify-content-end align-items-start"
           >
             <img
-              src="assets/picada gigante.jpg"
+              src="./assets/picada gigante.jpg"
               class="img-picada-gigante"
               alt="Picada Gigante"
             />
@@ -557,8 +607,8 @@
             <div class="col-md-4 text-center mt-5">
               <a class="navbar-brand" href="#Inicio">
                 <img
-                  src="assets/logo/LOGOS Y SIMBOLOS REDES/logo sin fondo.png"
-                  alt="Logo Picada"
+                  src="./assets/logo/logos y simbolos redes/logo sin fondo.png"
+                  alt="logo Picada"
                   class="img-fluid nav-logo-foot"
                   title="logo-pb"
                 />
