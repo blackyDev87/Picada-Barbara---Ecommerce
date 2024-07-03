@@ -68,7 +68,9 @@
                 type="search"
                 placeholder="Buscar"
                 aria-label="Search"
-              /><button
+                id="searchInput"
+              />
+              <button
                 class="btn btn-search search-input-submit"
                 aria-label="Buscar"
                 type="submit"
@@ -81,7 +83,18 @@
                 />
               </button>
             </form>
+            <div
+              class="position-absolute text-center searchSuggestions"
+              id="searchSuggestions"
+            >
+              <div class="card list-cont-search">
+                <ul class="list-group list-group-flush">
+                  <!-- Aquí se agregarán dinámicamente las sugerencias de búsqueda -->
+                </ul>
+              </div>
+            </div>
           </div>
+
           <button
             class="navbar-barco ms-3 mt-3 mb-3"
             type="button"
@@ -610,4 +623,3 @@
     ></script>
   </body>
 </html>
-

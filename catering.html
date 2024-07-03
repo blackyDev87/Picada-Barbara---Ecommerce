@@ -68,7 +68,9 @@
                 type="search"
                 placeholder="Buscar"
                 aria-label="Search"
-              /><button
+                id="searchInput"
+              />
+              <button
                 class="btn btn-search search-input-submit"
                 aria-label="Buscar"
                 type="submit"
@@ -81,7 +83,18 @@
                 />
               </button>
             </form>
+            <div
+              class="position-absolute text-center searchSuggestions"
+              id="searchSuggestions"
+            >
+              <div class="card list-cont-search">
+                <ul class="list-group list-group-flush">
+                  <!-- Aquí se agregarán dinámicamente las sugerencias de búsqueda -->
+                </ul>
+              </div>
+            </div>
           </div>
+
           <button
             class="navbar-barco ms-3 mt-3 mb-3"
             type="button"
@@ -399,91 +412,134 @@
     </div>
     <!-- Productos -->
 
-    <div class="container mt-5 mb-5">
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <div class="card">
-            <div
-              id="carouselExampleIndicators"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://via.placeholder.com/600x300"
-                    class="d-block w-100 card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="https://via.placeholder.com/600x300"
-                    class="d-block w-100 card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="https://via.placeholder.com/600x300"
-                    class="d-block w-100 card-img-top"
-                    alt="..."
-                  />
-                </div>
-              </div>
+    <div class="container prod-cont">
+      <div class="row mt-5 mb-5" data-category="D"></div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="productModal"
+        tabindex="-1"
+        aria-labelledby="productModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productModalLabel">
+                Detalles del Producto
+              </h5>
               <button
-                class="carousel-control-prev"
                 type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Título de la tarjeta</h5>
-              <p class="card-text">
-                Descripción breve sobre la tarjeta con carrusel de imágenes.
-              </p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+            <div class="modal-body">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <div
+                      id="productCarousel"
+                      class="carousel slide"
+                      data-bs-ride="carousel"
+                    >
+                      <div class="carousel-indicators">
+                        <button
+                          type="button"
+                          data-bs-target="#productCarousel"
+                          data-bs-slide-to="0"
+                          class="active"
+                          aria-current="true"
+                          aria-label="Slide 1"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#productCarousel"
+                          data-bs-slide-to="1"
+                          aria-label="Slide 2"
+                        ></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <!-- Las imágenes se cargarán aquí dinámicamente -->
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#productCarousel"
+                        data-bs-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Anterior</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#productCarousel"
+                        data-bs-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Siguiente</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 id="productName" class="card-title"></h5>
+                      <p id="productIngredients" class="card-text"></p>
+                      <p id="productPrice" class="card-text"></p>
+                      <div class="input-group mb-3">
+                        <button
+                          class="btn btn-outline-secondary"
+                          type="button"
+                          id="decrementQuantity"
+                        >
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          id="quantity"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button
+                          class="btn btn-outline-secondary"
+                          type="button"
+                          id="incrementQuantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="addToCart()"
+                      >
+                        Agregar al carrito
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        Comprar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
             </div>
           </div>
         </div>

@@ -47,7 +47,8 @@
   </head>
   <body>
     <!-- NAV -->
-<div class="container-fluid navbar-contain fixed-top" id="navbar">
+
+    <div class="container-fluid navbar-contain fixed-top" id="navbar">
       <div class="row">
         <nav class="navbar navbar-expand-md text-center">
           <div class="col-12 col-md-2">
@@ -67,7 +68,9 @@
                 type="search"
                 placeholder="Buscar"
                 aria-label="Search"
-              /><button
+                id="searchInput"
+              />
+              <button
                 class="btn btn-search search-input-submit"
                 aria-label="Buscar"
                 type="submit"
@@ -80,7 +83,18 @@
                 />
               </button>
             </form>
+            <div
+              class="position-absolute text-center searchSuggestions"
+              id="searchSuggestions"
+            >
+              <div class="card list-cont-search">
+                <ul class="list-group list-group-flush">
+                  <!-- Aquí se agregarán dinámicamente las sugerencias de búsqueda -->
+                </ul>
+              </div>
+            </div>
           </div>
+
           <button
             class="navbar-barco ms-3 mt-3 mb-3"
             type="button"
@@ -262,7 +276,7 @@
       </div>
     </div>
 
-        <!-- Modal  registro-->
+    <!-- Modal  registro-->
 
     <div
       class="modal modal-sheet"
@@ -399,12 +413,14 @@
         </div>
       </div>
     </div>
+
     <!-- Productos -->
 
     <div class="container prod-cont">
-      <div class="row mt-5 mb-5"></div>
+      <div class="row mt-5 mb-5" data-category="A"></div>
 
       <!-- Modal -->
+
       <div
         class="modal fade"
         id="productModal"

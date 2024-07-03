@@ -178,13 +178,32 @@ body {
   font-weight: 600;
 }
 
+.searchSuggestions {
+  max-width: 90%;
+  overflow-y: auto;
+  max-height: 20rem; /* Altura máxima para las sugerencias */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+}
+
+.list-cont-search {
+  border: none !important;
+}
+
 .nav-item {
   margin-right: 1.5rem;
 }
 
+.nav-link-search {
+  text-decoration: none;
+  color: #333131;
+}
+
 .nav-link:focus {
-  border-bottom: 0.2rem solid #9eb000;
-  color: #9eb000;
+  border-bottom: 0.2rem solid #9eb000 !important;
+  color: #9eb000 !important;
 }
 
 .dropdown-item {
