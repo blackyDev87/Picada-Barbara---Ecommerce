@@ -96,7 +96,7 @@
           </div>
 
           <button
-            class="navbar-barco ms-3 mt-3 mb-3"
+            class="navbar-barco ms-3 mt-3 mb-3 d-md-none"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#navbarSupportedContent"
@@ -285,10 +285,10 @@
       id="registroModal"
       aria-labelledby="registroModalLabel"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content rounded-4 shadow">
           <div class="modal-header p-5 pb-4 border-bottom-0">
-            <h1 class="fw-bold mb-0 fs-2">Registrate gratis</h1>
+            <h1 class="fw-bold mb-0 fs-2">Registrate</h1>
             <button
               type="button"
               class="btn-close"
@@ -410,12 +410,14 @@
         </div>
       </div>
     </div>
+
     <!-- Productos -->
 
     <div class="container prod-cont">
       <div class="row mt-5 mb-5" data-category="B"></div>
 
-      <!-- Modal -->
+      <!-- Modal detalle de prod -->
+
       <div
         class="modal fade"
         id="productModal"
@@ -540,6 +542,42 @@
               >
                 Cerrar
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de confirmación de agregar al carrito -->
+
+    <div
+      class="modal fade"
+      id="addToCartModal"
+      tabindex="-1"
+      aria-labelledby="addToCartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title" id="addToCartModalLabel">
+              Producto agregado al carrito
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <div class="row">
+                <div class="col-2">
+                  <img
+                    src="assets/iconos/compras custom.png"
+                    alt="compra-exitosa"
+                    class="img-fluid niña-compra-exitosa"
+                  />
+                </div>
+                <div class="col-10">
+                  <p>¡El producto ha sido agregado correctamente al carrito!</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

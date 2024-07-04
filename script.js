@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // PRODUCTOS DINAMICOS
+
 document.addEventListener("DOMContentLoaded", function () {
   const productContainer = document.querySelector(".prod-cont .row");
   const categoryToLoad = productContainer.getAttribute("data-category");
@@ -39,8 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const productCard = document.createElement("div");
         productCard.className = "col-sm-12 col-md-4 mb-5";
 
+        // Estructura básica de la tarjeta de producto
         productCard.innerHTML = `
-          <div class="card">
+          <div class="card position-relative">
             <img src="${product.image}" class="card-img-top p-absolute" alt="${
           product.name
         }">
@@ -50,17 +52,45 @@ document.addEventListener("DOMContentLoaded", function () {
               <img src="assets/iconos/bolsa-de-la-compra.png" alt="carrito" title="carrito" class="cart-inCard"/>
               <img src="assets/iconos/casco-vikingo (2).png" alt="casco-vikingo" title="carrito casco vikingo" class="overlay-icon-inCard"/>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">${product.name}</h5>
-              <p class="card-text">Precio: $${new Intl.NumberFormat(
-                "es-ES"
-              ).format(product.price)}</p>
-              <button class="btn btn-primary" onclick="showProductDetails(${
-                product.id
-              })">Detalles</button>
+            <div class="card-body mt-5">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="card-title-products">${product.name}</h5>
+                </div>
+                <div class="col-6">
+                  <p class="card-text-products">$${new Intl.NumberFormat(
+                    "es-ES"
+                  ).format(product.price)}</p>
+                </div>
+                <div class="col-12 text-center mt-3">
+                  <button class="btn-picada-style justify-content-center" onclick="showProductDetails(${
+                    product.id
+                  })">Detalles</button>
+                </div>
+              </div>
             </div>
           </div>
         `;
+
+        // Si hay una imagen de hover, añadirla y agregar eventos de hover
+        if (product.hoverImage) {
+          const imgElement = productCard.querySelector(".card-img-top");
+          const hoverImgElement = document.createElement("img");
+          hoverImgElement.src = product.hoverImage;
+          hoverImgElement.className = "card-img-top hover-image p-absolute";
+          hoverImgElement.alt = product.name;
+          hoverImgElement.style.opacity = 0;
+
+          productCard.querySelector(".card").appendChild(hoverImgElement);
+
+          productCard.addEventListener("mouseenter", function () {
+            hoverImgElement.style.opacity = 1;
+          });
+
+          productCard.addEventListener("mouseleave", function () {
+            hoverImgElement.style.opacity = 0;
+          });
+        }
 
         productContainer.appendChild(productCard);
       });
@@ -168,9 +198,32 @@ function addToCart(productId, quantity = 1) {
         }
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCart();
+        showAddToCartModal(); // Mostrar el modal de confirmación
       }
     })
     .catch((error) => console.error("Error al agregar al carrito:", error));
+}
+
+// Función para mostrar el modal de confirmación de agregar al carrito
+function showAddToCartModal() {
+  const addToCartModal = new bootstrap.Modal(
+    document.getElementById("addToCartModal")
+  );
+  addToCartModal.show();
+
+  // Configurar un temporizador para cerrar el modal después de 4 segundos
+  setTimeout(() => {
+    addToCartModal.hide();
+  }, 3500);
+
+  // Agregar evento para cerrar el modal si se hace clic fuera de él
+  document
+    .getElementById("addToCartModal")
+    .addEventListener("click", function (event) {
+      if (event.target === this) {
+        addToCartModal.hide();
+      }
+    });
 }
 
 function updateCart() {

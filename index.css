@@ -98,6 +98,7 @@ body {
   margin-left: auto;
   margin-right: 1rem;
   cursor: pointer;
+  z-index: 10;
 }
 
 .icon-cart-contain-inCard:hover {
@@ -179,13 +180,17 @@ body {
 }
 
 .searchSuggestions {
-  max-width: 90%;
+  max-width: 91%;
   overflow-y: auto;
   max-height: 20rem; /* Altura máxima para las sugerencias */
   background-color: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
   z-index: 2000;
+}
+
+.list-group-item:hover {
+  background-color: #cecece;
 }
 
 .list-cont-search {
@@ -613,4 +618,90 @@ input.form-control:focus {
   font-weight: 700;
   font-size: 2.5rem;
   color: #d8d6d6;
+}
+
+/* MAPA */
+
+.cont-title-banner-presentacion-map {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #353434;
+}
+
+iframe {
+  border: none;
+  border-radius: 0.1%;
+}
+
+.envios-cont {
+  border: 0.2rem solid #9eb000;
+  border-radius: 0.5%;
+}
+
+.modal {
+  border: none !important;
+}
+
+.card {
+  border: none !important;
+}
+
+.card-title-products {
+  font-family: "Montserrat", sans-serif !important;
+  float: left;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-align: left;
+  color: #646464;
+}
+
+.card-text-products {
+  font-family: "Montserrat", sans-serif !important;
+  float: right;
+  padding-left: 0;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: right;
+  color: #646464;
+}
+
+.btn-picada-style {
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #9eb000;
+  fill: #9eb000;
+  background-color: #fff;
+  border: 3px solid #9eb000;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif !important;
+  transition: all 0.4s ease;
+}
+
+.btn-picada-style:hover {
+  background-color: #9eb000;
+  color: #fff;
+  fill: #fff;
+  outline: 0;
+  opacity: 0.8;
+}
+
+.card-img-top {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-img-top.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
